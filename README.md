@@ -1,35 +1,52 @@
-# QE-Automation-Selenium
-A maven project for Selenium with latest dependencies. Please follow below procedures to clone, execute or write test cases.
+# 🚀 QE Automation (Selenium + Cucumber + TestNG)
 
-1. Open a terminal window/command prompt
-2. Clone this project
-3. cd cloned-repo
-4. mvn clean verify 
+![Java](https://img.shields.io/badge/Java-20-blue?logo=openjdk)
+![Selenium](https://img.shields.io/badge/Selenium-4.x-43B02A?logo=selenium)
+![Cucumber](https://img.shields.io/badge/Cucumber-BDD-23D96C?logo=cucumber)
+![CI](https://img.shields.io/badge/CI-Windows-2088FF?logo=githubactions)
 
-All dependencies should now be downloaded
+Modular UI test automation framework using **Java, Selenium, Cucumber, and TestNG**.
 
-### What should I know?
+## 📦 Modules
+- **Framework**: reusable core (driver, wrappers, hooks, config, logging, reporting)
+- **AssessmentProj**: executable tests (features, step definitions, page objects, runner)
 
-To run the test suite please user below mvn command:
-* mvn clean test -fae -DBrowserType="CHROME"
+## ✨ Highlights
+- Maven multi-module setup
+- Page Object Model (POM)
+- Cucumber + TestNG parallel execution
+- Extent + Cucumber reports
+- GitHub Actions Windows CI
 
-Yes you can specify which browser to use by using one of the following on the command line:
-- `-Dbrowser=chrome` -  (It's implemented)
+## ✅ Prerequisites
+- Java 20
+- Maven 3.6+
+- Chrome
 
-Following browsers are not yet implemented:
+## ⚡ Quick Start
+```sh
+git clone <your-repository-url>
+cd QE-Automation
+mvn clean verify
+```
 
-- `-Dbrowser=chrome_headless` -  (It's not yet implemented)
-- `-Dbrowser=firefox` -  (It's not yet implemented)
-- `-Dbrowser=ie` -  (It's not yet implemented)
-- `-Dbrowser=edge` -  (It's not yet implemented)
-- `-Dbrowser=opera` -  (It's not yet implemented)
-- `-Dbrowser=brave` -  (It's not yet implemented)
+## ▶️ Run Tests
+```sh
+mvn clean test -fae
+```
 
+With runtime options:
+```sh
+mvn clean test -fae -DBrowserType=CHROME -DBrowser=CHROME -DHeadless=true
+```
 
-If the tests pass/fail Extent Report will be saved in ${project.basedir}/Reports/ExecutionReport.html
+## 📊 Output
+- `Reports/ExecutionReport <timestamp>/ExtentReport_<timestamp>.html`
+- `AssessmentProj/target/cucumber-reports/`
+- `Logs/`
 
-### Window Build CI
+## 🔁 CI
+- `.github/workflows/WinBuildCI.yml`
 
-Windows CI Job is added to execute build. Screenshot of passing build is attached below for reference!
-
-![Win_CI_Build.png](Win_CI_Build.png)
+## 📄 License
+MIT License
